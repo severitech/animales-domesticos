@@ -1,0 +1,12 @@
+@import "tailwindcss";
+/* Animaciones simples para reemplazar useFrame intensivo */
+@keyframes float {
+  0%, 100% { transform: translateY(0) }
+  50% { transform: translateY(-6px) }
+}
+.flotar { animation: float 6s ease-in-out infinite; }
+
+/* Clases “cristal”/brillo si las usabas */
+.tarjeta-cristal { backdrop-filter: blur(10px); background: rgba(255,255,255,.6); }
+.efecto-zoom { transition: transform .3s; }
+.efecto-zoom:hover { transform: scale(1.02); }

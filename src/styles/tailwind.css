@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+/* ===== Animaciones reutilizables ===== */
+
+/* Fade + slide (entradas suaves) */
+@keyframes fade-slide-up {
+  0% { opacity: 0; transform: translateY(10px) }
+  100% { opacity: 1; transform: translateY(0) }
+}
+.animate-fade-slide { animation: fade-slide-up .35s ease-out both }
+
+/* Leve pop para “correcto” / resultados */
+@keyframes pop {
+  0% { transform: scale(.96); opacity: .5 }
+  100% { transform: scale(1); opacity: 1 }
+}
+.animate-pop { animation: pop .22s ease-out both }
+
+/* Acordeón (CSS-only): transiciones de altura + opacidad */
+.collapse {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: max-height .35s ease, opacity .3s ease, transform .35s ease;
+}
+.collapse.open {
+  max-height: 1200px; /* suficientemente grande para tu contenido */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Botón “tap” (al hacer click) */
+.btn-tap:active { transform: translateY(1px) scale(.99) }
+
+/* Barra de progreso más suave */
+.progress-smooth {
+  transition: width .45s ease, background .3s ease, transform .3s ease;
+}
+
+/* ===== Fondo bonito y liviano ===== */
+
+.bg-app {
+  background:
+    radial-gradient(1200px 600px at 120% -10%, rgba(125,211,252,.35), transparent 60%),
+    radial-gradient(900px 500px at -10% 120%, rgba(167,139,250,.28), transparent 60%),
+    linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+}
+
+/* blobs animados muy sutiles */
+.bg-blobs {
+  position: absolute; inset: 0; pointer-events: none; filter: blur(40px);
+  background:
+    radial-gradient(120px 120px at 20% 30%, rgba(59,130,246,.14), transparent 60%),
+    radial-gradient(160px 160px at 80% 20%, rgba(52,211,153,.16), transparent 60%),
+    radial-gradient(140px 140px at 70% 80%, rgba(168,85,247,.14), transparent 60%);
+  animation: blobs-move 18s ease-in-out infinite alternate;
+}
+@keyframes blobs-move {
+  0%   { transform: translateY(0) translateX(0) scale(1) }
+  100% { transform: translateY(-12px) translateX(8px) scale(1.02) }
+}
+
+/* grano muy sutil (sin imagen) */
+.bg-noise {
+  background-image:
+    radial-gradient(rgba(0,0,0,.035) 1px, transparent 1px);
+  background-size: 6px 6px;
+  mix-blend-mode: multiply;
+  opacity: .35;
+}
+@keyframes blobMove {
+  0% { transform: translate(0, 0) scale(1) }
+  100% { transform: translate(-12px, 8px) scale(1.02) }
+}
+@keyframes fade-slide-up {
+  0% { opacity: 0; transform: translateY(12px) }
+  100% { opacity: 1; transform: translateY(0) }
+}
+.animate-fade-slide {
+  animation: fade-slide-up 0.6s ease-out both;
+}
