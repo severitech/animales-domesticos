@@ -319,7 +319,7 @@ export default function MascotasApp() {
               Los animales son nuestros mejores amigos y merecen todo nuestro
               amor y cuidado 💖
             </p>
-            <p className="text-sm opacity-75 mt-2">
+            {/* <p className="text-sm opacity-75 mt-2">
               Desarrollado por{" "}
               <a
                 href="https://github.com/severitech"
@@ -329,7 +329,7 @@ export default function MascotasApp() {
               >
                 Douglas Padilla
               </a>
-            </p>
+            </p> */}
           </div>
         </div>
       </footer>

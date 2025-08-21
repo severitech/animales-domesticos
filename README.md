@@ -35,5 +35,5 @@ Proyecto educativo interactivo que presenta información visual y detallada sobr
 1. Clona este repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/mundo-animal-domestico.git
+git clone https://github.com/severitech/mundo-animal-domestico.git
 cd mundo-animal-domestico
